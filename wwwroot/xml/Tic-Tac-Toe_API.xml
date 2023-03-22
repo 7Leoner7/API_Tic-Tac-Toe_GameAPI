@@ -1,0 +1,234 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>API_Tic-Tac-Toe_Game</name>
+    </assembly>
+    <members>
+        <member name="M:API_Tic_Tac_Toe_Game.Controllers.GameController.GetAllPlayers">
+            <summary>
+            Получить список всех игроков
+            </summary>
+        </member>
+        <member name="M:API_Tic_Tac_Toe_Game.Controllers.GameController.PlayerCreate(API_Tic_Tac_Toe_Game.Tic_Tac_Toe_Game.Player)">
+            <summary>
+            Создание игрока
+            </summary>
+            <param name="player"></param>
+            <returns></returns>
+        </member>
+        <member name="M:API_Tic_Tac_Toe_Game.Controllers.GameController.PlayerGet(System.Int32)">
+            <summary>
+            Получить игрока.
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:API_Tic_Tac_Toe_Game.Controllers.GameController.PlayerSetState(System.Int32,API_Tic_Tac_Toe_Game.Tic_Tac_Toe_Game.PlayerState)">
+            <summary>
+            Обновляет свойство PlayerState игрока.
+            </summary>
+            <param name="id"></param>
+            <param name="state"></param>
+            <returns></returns>
+        </member>
+        <member name="M:API_Tic_Tac_Toe_Game.Controllers.GameController.DeletePLayer(System.Int32)">
+            <summary>
+            Удаляет игрока
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:API_Tic_Tac_Toe_Game.Controllers.GameController.GetAllGames">
+            <summary>
+            Возвращает все игровые комнаты
+            </summary>
+        </member>
+        <member name="M:API_Tic_Tac_Toe_Game.Controllers.GameController.GetGame(System.Int32)">
+            <summary>
+            Возвращает определённую игровую комнату
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:API_Tic_Tac_Toe_Game.Controllers.GameController.CreateGame(System.String)">
+            <summary>
+            Создаёт комнату с названием.
+            </summary>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:API_Tic_Tac_Toe_Game.Controllers.GameController.SetGameMetaData(System.Int32,System.Int32)">
+            <summary>
+            Устанавливает GameMetaData для комнаты
+            </summary>
+            <param name="id_game"></param>
+            <param name="Meta_Id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:API_Tic_Tac_Toe_Game.Controllers.GameController.DeleteGame(System.Int32)">
+            <summary>
+            Отправляет запрос на удаление комнаты
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:API_Tic_Tac_Toe_Game.Controllers.GameController.UpdateGame(API_Tic_Tac_Toe_Game.Tic_Tac_Toe_Game.GameRoomBase)">
+             <summary>
+             Принудительно обновляет все параметры игровой комнаты
+             </summary>
+             <remarks>
+            {
+            "id": 0,
+            "name": "char",
+            "gameDataId": 0,
+            "gameMap": "char",
+            "gameState": 0,
+            "playerX_ID": 0,
+            "playerO_ID": 0
+            }
+             </remarks>
+             <param name="game"></param>
+             <returns></returns>
+        </member>
+        <member name="M:API_Tic_Tac_Toe_Game.Controllers.GameController.AddPlayerX_InGame(System.Int32,System.Int32)">
+            <summary>
+            Игрок вошёл в комнату за команду X
+            </summary>
+            <param name="id_game"></param>
+            <param name="id_player"></param>
+            <returns></returns>
+        </member>
+        <member name="M:API_Tic_Tac_Toe_Game.Controllers.GameController.AddPlayerO_InGame(System.Int32,System.Int32)">
+            <summary>
+            Игрок вошёл в комнату за команду O
+            </summary>
+            <param name="id_game"></param>
+            <param name="id_player"></param>
+            <returns></returns>
+        </member>
+        <member name="M:API_Tic_Tac_Toe_Game.Controllers.GameController.ExitPlayerX_OfGame(System.Int32,System.Int32)">
+            <summary>
+            Игрок X вышел из комнаты
+            </summary>
+            <param name="id_game"></param>
+            <param name="id_player"></param>
+            <returns></returns>
+        </member>
+        <member name="M:API_Tic_Tac_Toe_Game.Controllers.GameController.ExitPlayerO_OfGame(System.Int32,System.Int32)">
+            <summary>
+            Игрок O вышел из комнаты
+            </summary>
+            <param name="id_game"></param>
+            <param name="id_player"></param>
+            <returns></returns>
+        </member>
+        <member name="M:API_Tic_Tac_Toe_Game.Controllers.GameController.SetGameState(System.Int32,API_Tic_Tac_Toe_Game.Tic_Tac_Toe_Game.GameState)">
+            <summary>
+            Принудительно меняет состояние игры
+            </summary>
+            <param name="id_game"></param>
+            <param name="state"></param>
+            <returns></returns>
+        </member>
+        <member name="M:API_Tic_Tac_Toe_Game.Controllers.GameController.ReqForCloseGame(System.Int32)">
+            <summary>
+            Отправляет запрос на закрытие комнаты (завершение игры)
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:API_Tic_Tac_Toe_Game.Controllers.GameController.SetGameMap(System.Int32,System.String)">
+            <summary>
+            Меняет игровую карту и возвращает победителя
+            </summary>
+            <remarks>
+            Игровая карта Map состоит из одной строки длиной 9 символов.
+            
+            Её разбивают на 3 массива строк по 3 символа.
+            
+            В карте могут использоваться только те символы, которые написаны в мета-данных игры (X, O, VoidCell)
+            
+            Если возвратит символ X - победитель Player_X
+            
+            Если возвратит символ O - победитель Player_O
+            
+            Если возвратит символ * - ничья, либо игра незакончена
+            
+            Пример карты: oxoxox*xo
+            
+            MetaData = { x: "x", o: "o", voidcell: "*" }
+            
+            oxo
+            
+            xox
+            
+            *xo
+            
+            Возвратит: o
+            
+            </remarks>
+            <returns></returns>
+        </member>
+        <member name="M:API_Tic_Tac_Toe_Game.Controllers.GameController.GameMetaData_GetAll">
+            <summary>
+            Выводит все созданные мета-данные игр
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:API_Tic_Tac_Toe_Game.Controllers.GameController.GameMetaData_Get(System.Int32)">
+            <summary>
+            Выводит мета-данные по их Id
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:API_Tic_Tac_Toe_Game.Controllers.GameController.GameMetaData_Create(API_Tic_Tac_Toe_Game.Tic_Tac_Toe_Game.GameMetaData)">
+            <summary>
+            Создание мета-данных игры
+            </summary>
+            <remarks>
+                Пример:
+            
+                POST /GameTic-Tac-Toe/GameMetaData/Create
+            
+                {
+                
+                    "id": 0,
+                
+                    "x": "x",
+                
+                    "o": "o",
+                
+                    "voidCell": "*"
+                
+                 }
+                 
+               Ключи x, o, voidCell принимают тип данных char
+            </remarks>
+            <param name="data"></param>
+            <returns></returns>
+        </member>
+        <member name="M:API_Tic_Tac_Toe_Game.Controllers.GameController.GameMetaData_Update(API_Tic_Tac_Toe_Game.Tic_Tac_Toe_Game.GameMetaData)">
+            <summary>
+            Обновляет мета-данные игр
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:API_Tic_Tac_Toe_Game.Controllers.GameController.GameMetaData_Delete(System.Int32)">
+            <summary>
+            Удаляет мета-данные игр
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:API_Tic_Tac_Toe_Game.Tic_Tac_Toe_Game.BaseModel.Id">
+            <summary>
+            Id модели. Генерируется автоматически.
+            </summary>
+        </member>
+        <member name="M:API_Tic_Tac_Toe_Game.Tic_Tac_Toe_Game.GameRoom.GameProcessInit">
+            <summary>
+            Инициализирует новый экземпляр игры
+            </summary>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
