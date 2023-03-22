@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  api_tic-tac-toe_game:
+    image: ${DOCKER_REGISTRY-}apitictactoegame
+    build:
+      context: .
+      dockerfile: Dockerfile
