@@ -73,22 +73,11 @@
             <returns></returns>
         </member>
         <member name="M:API_Tic_Tac_Toe_Game.Controllers.GameController.UpdateGame(API_Tic_Tac_Toe_Game.Tic_Tac_Toe_Game.GameRoomBase)">
-             <summary>
-             Принудительно обновляет все параметры игровой комнаты
-             </summary>
-             <remarks>
-            {
-            "id": 0,
-            "name": "char",
-            "gameDataId": 0,
-            "gameMap": "char",
-            "gameState": 0,
-            "playerX_ID": 0,
-            "playerO_ID": 0
-            }
-             </remarks>
-             <param name="game"></param>
-             <returns></returns>
+            <summary>
+            Принудительно обновляет все параметры игровой комнаты
+            </summary>
+            <param name="game"></param>
+            <returns></returns>
         </member>
         <member name="M:API_Tic_Tac_Toe_Game.Controllers.GameController.AddPlayerX_InGame(System.Int32,System.Int32)">
             <summary>

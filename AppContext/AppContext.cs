@@ -10,14 +10,10 @@ namespace API_Tic_Tac_Toe_Game.AppContext
         public DbSet<GameRoomBase> GameRooms { get; set; }
         public DbSet<Player> Players { get; set; }
 
-        public ApplicationContext(DbContextOptions<ApplicationContext> options) : base(options) 
+        public ApplicationContext(DbContextOptions<ApplicationContext> options)
+            : base(options)
         {
-            //Database.EnsureDeleted();
             Database.EnsureCreated();
-        }
-
-        protected override void OnModelCreating(ModelBuilder modelBuilder)
-        {
         }
     }
 }

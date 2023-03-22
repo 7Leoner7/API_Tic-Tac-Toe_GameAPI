@@ -13,9 +13,8 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-string connection = "Server=(localdb)\\mssqllocaldb;Database=GameDB;Trusted_Connection=True";
-builder.Services.AddDbContext<ApplicationContext>(options =>
-    options.UseSqlServer(connection));
+builder.Services.AddDbContext<ApplicationContext>(options => 
+        options.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection")));
 builder.Services.AddTransient<IDbProvider<GameRoomBase>, DbProvider<GameRoomBase>>();
 builder.Services.AddTransient<IDbProvider<Player>, DbProvider<Player>>();
 builder.Services.AddTransient<IDbProvider<GameMetaData>, DbProvider<GameMetaData>>();
@@ -29,7 +28,7 @@ builder.Services.AddSwaggerGen(options =>
         Description = "API для того, чтобы играть в крестики-нолики",
     });
     
-    var xmlPath = builder.Environment.WebRootPath +"\\xml\\Tic-Tac-Toe_API.xml";
+    var xmlPath = builder.Environment.WebRootPath +"/xml/Tic-Tac-Toe_API.xml";
     options.IncludeXmlComments(xmlPath);
 });
 
